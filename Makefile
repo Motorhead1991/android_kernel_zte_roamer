@@ -191,7 +191,7 @@ SUBARCH := arm
 ccache := /usr/bin/ccache
 export KBUILD_BUILDHOST := $(SUBARCH)
 ARCH		?= $(SUBARCH)
-CROSS_COMPILE	?= $(ccache) /home/motorhead/Toolchain/arm-eabi-4.4.0/bin/arm-eabi-
+CROSS_COMPILE	?= $(ccache) /home/motorhead/Toolchain/arm-eabi-4.6/bin/arm-eabi-
 
 # Architecture as present in compile.h
 UTS_MACHINE 	:= $(ARCH)
@@ -351,10 +351,9 @@ LINUXINCLUDE    := -I$(srctree)/arch/$(hdr-arch)/include -Iinclude \
 KBUILD_CPPFLAGS := -D__KERNEL__
 
 KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs \
-		   -Werror \
-		   -fno-strict-aliasing -fno-common \
+		   -fno-strict-aliasing -fno-common -Wno-array-bounds \
 		   -Werror-implicit-function-declaration \
-		   -Wno-format-security \
+		   -Wno-format-security -Wno-unused-but-set-variable \
 		   -fno-delete-null-pointer-checks
 KBUILD_AFLAGS   := -D__ASSEMBLY__
 
