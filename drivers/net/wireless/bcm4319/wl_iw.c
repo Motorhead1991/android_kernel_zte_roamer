@@ -36,6 +36,7 @@
 
 #include <linux/if_arp.h>
 #include <asm/uaccess.h>
+#include <linux/semaphore.h>
 
 #include <dngl_stats.h>
 #include <dhd.h>

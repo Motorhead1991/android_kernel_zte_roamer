@@ -3,8 +3,9 @@ DHDCFLAGS = -DLINUX  -DBCMDRIVER -DBCMDONGLEHOST -DDHDTHREAD -DBCMWPA2 -DBCMWAPI
 -DUNRELEASEDCHIP -DDHD_GPL -DDHD_SCHED -DSOFTAP -DBDC -DTOE              \
 -DDHD_BCMEVENTS -DSHOW_EVENTS  -DBCMSDIO -DDHD_GPL      \
 -DBCMLXSDMMC -DBCMPLATFORM_BUS   -DEMBEDDED_PLATFORM -DOEM_ANDROID       \
--DMMC_SDIO_ABORT -Wall  -DOOB_INTR_ONLY -DCUSTOM_OOB_GPIO_NUM=19                                             \
--Wstrict-prototypes -Werror     -DCSCAN  -DKEEP_ALIVE                                       \
+-DMMC_SDIO_ABORT -Wall \
+ -DOOB_INTR_ONLY -DCUSTOM_OOB_GPIO_NUM=19                                             \
+-Wstrict-prototypes -DCSCAN  -DKEEP_ALIVE                                       \
 -Idrivers/net/wireless/bcm4319 -Idrivers/net/wireless/bcm4319/include
 
 DHDOFILES = dhd_linux.o linux_osl.o bcmutils.o dhd_common.o dhd_custom_gpio.o \
