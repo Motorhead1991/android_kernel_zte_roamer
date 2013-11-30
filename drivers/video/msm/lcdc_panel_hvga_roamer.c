@@ -847,7 +847,7 @@ static struct platform_device this_device = {
 		.platform_data = &lcdc_tft_panel_data,
 	}
 };
-static int __init lcdc_panel_probe(struct platform_device *pdev)
+static int lcdc_panel_probe(struct platform_device *pdev)
 {
 	struct msm_panel_info *pinfo;
 	int ret;
